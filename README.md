@@ -9,7 +9,7 @@ FAQtoid is a simple free all-in-one help system for your website or web applicat
 Users see answers as they type.
 * **Tours**  
 Walk users through the parts of each page.
-* **Video Gallery**
+* **Video Gallery**  
 Users can watch videos while staying on the webpage that a video explains.
 * **Smart Email Form**  
 Handles crazy and junk messages. Automatically includes detailed information about your user, what they were trying to do, and any errors on the page.
