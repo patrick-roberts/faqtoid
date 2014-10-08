@@ -3,7 +3,7 @@ faqtoid
 
 Automated Website Help System: FAQ, Tours/Walkthroughs, Email Form, Video Gallery
 
-FAQtoid is a simple free all-in-one help system for your website or web application. It reduces your support costs by giving visitors the tools to help themselves. <!--FAQtoid takes care of everything from initial walkthroughs to providing the information you need to fix bugs.-->
+FAQtoid is a simple free all-in-one help system for your website or web application. It reduces your support costs by giving visitors the tools to help themselves.
 
 * **FAQ with Live Search**  
 Users see answers as they type.
@@ -12,6 +12,8 @@ Walk users through the parts of each page.
 * **Video Gallery**
 * **Smart Email Form**  
 Handles crazy and junk messages. Automatically includes detailed information about your user, what they were trying to do, and any errors on the page.
+
+[Live Demo](http://faqtoid.patrickroberts.ca/)
 
 All without forcing your user to leave what they were doing and go to a separate isolated help page.
 
@@ -41,7 +43,7 @@ Even works with IE8.
 
 `<button class=showFaqtoid>Help</button>` makes a button that shows the FAQtoid window. Or you can add `class=showFaqtoid` to make any element show FAQtoid when clicked.
 
-You can also place FAQtoid <a href="inline.html">in the page</a>: `<div id=inlineFaqtoid></div>` Paste that anywhere in the body of a page.
+You can also place FAQtoid [in the page](http://faqtoid.patrickroberts.ca/inline.html): `<div id=inlineFaqtoid></div>` Paste that anywhere in the body of a page.
 
 ### How to Add FAQs
 
@@ -99,20 +101,10 @@ Instead of defining FAQs in a webpage, you can keep them all in their own file. 
 
 ### Mail Script
 
-To securely receive messages from your visitors through FAQtoid you need to upload one small PHP script to your web host: <a href="faqtoidmail.php" target=_blank>faqtoidmail.php</a>.
+To securely receive messages from your visitors through FAQtoid you need to upload one small PHP script to your web host: [faqtoidmail.php](faqtoidmail.php).
 
 Before uploading, save it to your computer, open it in a text editor, and change the email address to your own.
 
 Also add `data-mailscript="faqtoidmail.php"` to your FAQtoid script tag.
 
-If you need help, <a href="inline.html">contact me</a>.
-
-<!--
-### Caveats
-
-It uses ajax to load questions/answers and to send you messages. Watch out for cross site scripting security restrictions. That means your faq file and mailscript have to be on the same domain as the webpage that includes FAQtoid. Unless your mailscript explicitly allows cross domain requests. Even then, IE8 seems not to support it.
-
-When sending emails, FAQtoid expects a JSON response from the script.
-On success: `{"success":1}`
-On error: `{"error":"Error message"}`
--->
+If you need help, [contact me](http://faqtoid.patrickroberts.ca/inline.html).
