@@ -30,8 +30,6 @@ Easy to setup. No programming required for FAQs, tours, and videos. Simply paste
 
 jQuery: `<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>`
 
-Even works with IE8. 
-
 ### Installation
 
 1. Save the .js and .css files to your site.
