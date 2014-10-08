@@ -1,0 +1,229 @@
+#faqtoidMore {
+    font-size: small;
+    color: white;
+    background: light-gray;
+    display: inline-block;
+    margin: 0 0 10px 30px;
+    border: none;
+    cursor: pointer;
+}
+#faqtoidShowMailForm {
+    width: 100%;
+    display: block;
+    margin: 1em 0 0 0;
+}
+.hideFaqtoid {
+    cursor: pointer;
+}
+#faqtoidMatches {
+    margin-top: 12px;
+    display: block;
+    zfont-size: 15px;
+}
+.faqtoidQuestion {
+    font-weight: bold;
+}
+.faqtoidAnswer {
+    margin: 10px 0 0 0;
+    display: none;
+}
+#faqtoid .startFaqtoidTour {
+    width: 100%;
+    display: block;
+}
+#faqtoidSidebar {
+    clear: both;
+    display: none;
+    vertical-align: top;
+    float: right;
+    margin: 5px 0 15px 15px;
+}
+#faqtoid input[type=email] {
+    font-family: "Lucida Console", Monaco, Courier, monospace; /* to prevent email typos */
+    width: 100%;
+}
+#faqtoid .zzp { margin: 12px 0 0 0; }
+.faqtoidTourHighlight {
+    box-shadow: /* inset */ 0 0 9px 1px orange;
+}
+.faqtoidHighlight {
+    background: gold;
+}
+#fZZZaqtoid .modal-body > *:last {
+    margin-bottom: -10px;
+}
+
+.faqtoidWindow {
+    background: white;
+    /*border: 1px solid #bbb;*/
+    border-radius: 4px;
+    padding: 1em;
+    position: absolute;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 80vw;
+    max-height: 80vh;
+    overflow: auto;
+    overflow-x: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.faqtoidTitle {
+    margin-top: 0;
+}
+
+.faqtoidBtn {
+    /*color: white;*/
+    background: white;
+    /*border-radius: px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);*/
+    /*background: #888;*/
+    padding: 6px 12px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    white-space: normal;
+}    
+.faqtoidBlockBtn {
+    width: 100%;
+    display: block;
+    /*font-weight: bold;*/
+    margin: 1em 0;
+    /*font-size: 120%;*/
+}
+.faqtoidBtn:hover {
+    background: #eee;
+}
+.faqtoidPrimaryBtn {
+    background: #428bca;
+    border: 0;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+.faqtoidPrimaryBtn:hover {
+    background: #357ebd;
+}
+
+#faqtoid table {
+    display: block;
+    width: 100%;
+}
+
+#faqtoid input, #faqtoid textarea {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#faqtoidTour, #faqtoids {
+    display: none;
+}
+
+#faqtoidTourTip {
+    display: none; 
+    max-width: 300px;
+    background: #222; 
+    color: white; 
+    padding: 15px; 
+    border-radius: 10px;
+    font-weight: bold;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute; 
+    z-index: 20001;
+}
+#faqtoidTourTip > div:first-child {
+    margin-bottom: 5px; 
+    font-size: 24px; /* big enough to easily tap buttons */ 
+    white-space: nowrap; 
+    color: #ccc;
+    vertical-align: middle;
+}
+#faqtoidTourTip > div:first-child div {
+    float: right; 
+    margin: 0 0 5px 5px; 
+    vertical-align: middle;
+}
+#faqtoidTourTip > div:last-child {
+    text-align: justify;
+    clear: both;
+}
+#prevFaqtoidTourTip {
+    margin-right: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+#nextFaqtoidTourTip {
+    margin-left: 15px;
+	cursor: pointer;
+	color: #0f0;
+    display: inline-block;
+}
+/*#nextFaqtoidTourTip span {
+    width: 0;
+    height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 8px solid #0f0;    
+}*/
+/*.iconNext:before {
+    width:16px;
+    height:16px;
+    -webkit-border-radius:16px;
+    -moz-border-radius:16px;
+    border-radius:16px;
+}
+.iconNext:after {
+    left:7px;
+    border:4px solid transparent;
+    border-left-color:#00ff00;
+    margin-top:-4px;
+    background:transparent;
+}*/
+
+/* spinner from http://www.designcouch.com/home/why/2013/05/23/dead-simple-pure-css-loading-spinner/ */
+
+.spinner { 
+height:0.8em;
+width:0.8em;
+margin:0px auto;
+display: inline-block;
+position:relative;
+-webkit-animation: rotation .6s infinite linear;
+-moz-animation: rotation .6s infinite linear;
+-o-animation: rotation .6s infinite linear;
+animation: rotation .6s infinite linear;
+border-left:2px solid rgba(0,174,239,.15);
+border-right:2px solid rgba(0,174,239,.15);
+border-bottom:2px solid rgba(0,174,239,.15);
+border-top:2px solid rgba(0,174,239,.8);
+border-radius:100%;
+}
+
+@-webkit-keyframes rotation {
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(359deg);}
+}
+
+@-moz-keyframes rotation {
+from {-moz-transform: rotate(0deg);}
+to {-moz-transform: rotate(359deg);}
+}
+
+@-o-keyframes rotation {
+from {-o-transform: rotate(0deg);}
+to {-o-transform: rotate(359deg);}
+}
+
+@keyframes rotation {
+from {transform: rotate(0deg);}
+to {transform: rotate(359deg);}
+}
