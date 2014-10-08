@@ -3,6 +3,26 @@ faqtoid
 
 Automated Website Help System: FAQ, Tours/Walkthroughs, Email Form, Video Gallery
 
+FAQtoid is a simple free all-in-one help system for your website or web application. It reduces your support costs by giving visitors the tools to help themselves. <!--FAQtoid takes care of everything from initial walkthroughs to providing the information you need to fix bugs.-->
+
+* **FAQ with Live Search**  
+Users see answers as they type.
+* **Tours**  
+Walk users through the parts of each page.
+* **Video Gallery**
+* **Smart Email Form**  
+Handles crazy and junk messages. Automatically includes detailed information about your user, what they were trying to do, and any errors on the page.
+
+All without forcing your user to leave what they were doing and go to a separate isolated help page.
+
+See what happened when your user had a problem. When the user emails you, FAQtoid includes the contents of all forms on the page, cookies, localStorage, previous page, browser version, OS, and more. Forward the information to your programmer and he can fix bugs in a fraction of the time.
+
+Filters crazy messages. Blocks swear words, messages too short to be real, and duplicate messages. Converts all caps messages to normal punctuation.
+
+Works on desktops, tablets, and phones. Compatible with all major browsers including IE8. Also works in Cordova/PhoneGap apps.
+
+Easy to setup. No programming required for FAQs, tours, and videos. Simply paste HTML into your webpage. (The optional smart mail form unavoidably involves uploading one PHP script to your server.)
+
 ### Requires
 
 jQuery: `<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>`
