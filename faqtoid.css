@@ -22,6 +22,12 @@
 }
 .faqtoidQuestion {
     font-weight: bold;
+    /* the lines are below are to keep the question on 1 line so the form doesn't bounce around vertically while the user is typing a question and automatic matches are changing above -- might be a better designed solution -- but didnt look right in firefox and still have problem where the open answer is removed because of the user's message changing */
+    /*text-overflow': ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    max-width: 100%;*/
 }
 .faqtoidAnswer {
     margin: 10px 0 0 0;
@@ -39,20 +45,23 @@
     margin: 5px 0 15px 15px;
 }
 #faqtoid input[type=email] {
-    font-family: "Lucida Console", Monaco, Courier, monospace; /* to prevent email typos */
+    font-family: "Lucida Console", Monaco, Courier, monospace;
+    /* to prevent email typos */
     width: 100%;
 }
-#faqtoid .zzp { margin: 12px 0 0 0; }
+#faqtoid .zzp {
+    margin: 12px 0 0 0;
+}
 .faqtoidTourHighlight {
-    box-shadow: /* inset */ 0 0 9px 1px orange;
+    box-shadow: /* inset */
+    0 0 9px 1px orange;
 }
 .faqtoidHighlight {
     background: gold;
 }
-#fZZZaqtoid .modal-body > *:last {
+#fZZZaqtoid .modal-body> *:last {
     margin-bottom: -10px;
 }
-
 .faqtoidWindow {
     background: white;
     /*border: 1px solid #bbb;*/
@@ -62,17 +71,27 @@
     min-width: 300px;
     min-height: 300px;
     max-width: 80vw;
-    max-height: 80vh;
+    /*max-height: 80vh;*/
+    /* nested vertical scrolling is annoying; maybe it should have horz layout */
     overflow: auto;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
+@media only screen and (max-device-width: 480px) {
+    .faqtoidWindow {
+        max-height: none;
+        /* nested vertical scrolling is esepcially annoying on handheld */
+    }
+}
+
+/*.faqtoidBody {
+    overflow: auto;
+}*/
 
 .faqtoidTitle {
     margin-top: 0;
 }
-
 .faqtoidBtn {
     /*color: white;*/
     background: white;
@@ -83,7 +102,7 @@
     border: 1px solid #bbb;
     border-radius: 4px;
     white-space: normal;
-}    
+}
 .faqtoidBlockBtn {
     width: 100%;
     display: block;
@@ -104,76 +123,88 @@
 .faqtoidPrimaryBtn:hover {
     background: #357ebd;
 }
-
 #faqtoid table {
     display: block;
     width: 100%;
+    border-spacing: 0;
+    margin: 0;
 }
-
 #faqtoid input, #faqtoid textarea {
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-
 #faqtoidTour, #faqtoids {
     display: none;
 }
-
 #faqtoidTourTip {
-    display: none; 
+    display: none;
     max-width: 300px;
-    background: #222; 
-    color: white; 
-    padding: 15px; 
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 15px;
     border-radius: 10px;
     font-weight: bold;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    position: absolute; 
+    position: absolute;
     z-index: 20001;
+    line-height: 1.3em;
+    letter-spacing: 0.03em;
+    word-spacing: 0.1em;
 }
-#faqtoidTourTip > div:first-child {
-    margin-bottom: 5px; 
-    font-size: 24px; /* big enough to easily tap buttons */ 
-    white-space: nowrap; 
+#faqtoidTourTip p {
+    margin-top: 1em;
+}
+#faqtoidTourTip ol, #faqtoidTourTip ul {
+    margin-top: 0.5em;
+}
+#faqtoidTourTip> div:first-child {
+    margin-bottom: 1em;
+    font-size: 24px;
+    /* big enough to easily tap buttons */
+    white-space: nowrap;
     color: #ccc;
     vertical-align: middle;
 }
-#faqtoidTourTip > div:first-child div {
-    float: right; 
-    margin: 0 0 5px 5px; 
+#faqtoidTourTip> div:first-child div {
+    float: right;
+    margin: 0 0 5px 5px;
     vertical-align: middle;
 }
-#faqtoidTourTip > div:last-child {
-    text-align: justify;
+#faqtoidTourTip> div:last-child {
+    /*text-align: justify;*/
     clear: both;
 }
 #prevFaqtoidTourTip {
+    margin-left: 15px;
     margin-right: 15px;
     cursor: pointer;
     display: inline-block;
 }
 #nextFaqtoidTourTip {
     margin-left: 15px;
-	cursor: pointer;
-	color: #0f0;
+    cursor: pointer;
+    color: #5cb85c;
     display: inline-block;
 }
+
 /*#nextFaqtoidTourTip span {
     width: 0;
     height: 0;
 	border-top: 8px solid transparent;
 	border-bottom: 8px solid transparent;
-	border-left: 8px solid #0f0;    
+	border-left: 8px solid #0f0;
 }*/
+
+
 /*.iconNext:before {
     width:16px;
     height:16px;
@@ -189,41 +220,54 @@
     background:transparent;
 }*/
 
+
 /* spinner from http://www.designcouch.com/home/why/2013/05/23/dead-simple-pure-css-loading-spinner/ */
 
-.spinner { 
-height:0.8em;
-width:0.8em;
-margin:0px auto;
-display: inline-block;
-position:relative;
--webkit-animation: rotation .6s infinite linear;
--moz-animation: rotation .6s infinite linear;
--o-animation: rotation .6s infinite linear;
-animation: rotation .6s infinite linear;
-border-left:2px solid rgba(0,174,239,.15);
-border-right:2px solid rgba(0,174,239,.15);
-border-bottom:2px solid rgba(0,174,239,.15);
-border-top:2px solid rgba(0,174,239,.8);
-border-radius:100%;
+.spinner {
+    height: 0.8em;
+    width: 0.8em;
+    margin: 0px auto;
+    display: inline-block;
+    position: relative;
+    -webkit-animation: rotation .6s infinite linear;
+    -moz-animation: rotation .6s infinite linear;
+    -o-animation: rotation .6s infinite linear;
+    animation: rotation .6s infinite linear;
+    border-left: 2px solid rgba(0, 174, 239, .15);
+    border-right: 2px solid rgba(0, 174, 239, .15);
+    border-bottom: 2px solid rgba(0, 174, 239, .15);
+    border-top: 2px solid rgba(0, 174, 239, .8);
+    border-radius: 100%;
 }
-
 @-webkit-keyframes rotation {
-from {-webkit-transform: rotate(0deg);}
-to {-webkit-transform: rotate(359deg);}
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
 }
-
 @-moz-keyframes rotation {
-from {-moz-transform: rotate(0deg);}
-to {-moz-transform: rotate(359deg);}
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(359deg);
+    }
 }
-
 @-o-keyframes rotation {
-from {-o-transform: rotate(0deg);}
-to {-o-transform: rotate(359deg);}
+    from {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(359deg);
+    }
 }
-
 @keyframes rotation {
-from {transform: rotate(0deg);}
-to {transform: rotate(359deg);}
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
