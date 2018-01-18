@@ -1,3 +1,5 @@
+# NO LONGER MAINTAINED. PLEASE DON'T EMAIL ME.
+
 # FAQtoid: Automate Support
 
 ## Free Website Help System
